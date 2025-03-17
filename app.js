@@ -1,1 +1,13 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
+// Lista de amigos.
+const listaAmigos = [];
+const inpAmigo = document.getElementById("amigo");
+
+// Amigos que se mostrarán al agregarlos.
+const ulListaAmigos = document.getElementById("listaAmigos");
+
+// Función que agrega amigos a la lista.
+function agregarAmigo() {
+    listaAmigos.push(inpAmigo.value);
+    ulListaAmigos.innerHTML += `<li>${inpAmigo.value}</li>`;
+};
+
