@@ -13,7 +13,7 @@ const ulResultado = document.getElementById("resultado");
 function agregarAmigo() {
 
     // Alerta si no hay amigos.
-    if (!inpAmigo.value) {
+    if (inpAmigo.value == "") {
         alert("Escriba el nombre de algún amigo.")
     };
 
@@ -47,7 +47,13 @@ function sortearAmigo() {
         const amigoSecreto = listaAmigos[random];
         ulResultado.innerHTML = `<li>Su amigo secreto es: ${amigoSecreto} !!!</li>`
 
+        // Limpia y reinicia la lista.
+        function limpiarLista() {
+            ulListaAmigos.innerHTML = "";
+            listaAmigos.length = 0;
+        };
+        limpiarLista();
     };
-    
+
 };
 
